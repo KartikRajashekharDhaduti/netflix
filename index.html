@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Netflix</title>
+    <link rel="stylesheet" href="home_page.css" />
+    <script src="script2.js" defer></script>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="nav">
+        <div class="nav__left">
+            <a href="index.html">
+                <img class="nav_logo" src="logo.png" alt="Website Logo" />
+            </a>
+        </div>
+        <div class="nav__right">
+            <img src="avatar.jpeg" class="nav_avatar" alt="User Avatar" />
+        </div>
+    </div>
+
+    <!-- banner -->
+    <header id="banner">
+        <div id="banner__contents">
+            <h1 id="banner__title">Welcome to Netflix</h1> <!-- Add a title for clarity -->
+            <div id="banner__buttons">
+                <button class="banner__button">Play</button> <!-- Use class instead of ID -->
+                <button class="banner__button">My List</button>
+            </div>
+            <p id="banner__description">Enjoy watching your favorite shows!</p> <!-- Add description for clarity -->
+        </div>
+        <div id="banner__fadeBottom"></div>
+    </header>
+
+    <!-- row -->
+    <div id="headrow">
+        <div class="row">
+            <h2 class="row__title">Trending Now</h2> <!-- Add a title for clarity -->
+            <div class="row__posters"></div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            var nav = document.querySelector(".nav");
+            nav.classList.toggle("active", window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
